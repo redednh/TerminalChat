@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/reded/Dropbox/chat/client/client.cpp
+client.h
+/home/reded/Dropbox/chat/client/client.h
+
+/home/reded/Dropbox/chat/client/client.h
+arpa/inet.h
+-
+netinet/in.h
+-
+signal.h
+-
+sys/socket.h
+-
+sys/types.h
+-
+unistd.h
+-
+cstring
+-
+iostream
+-
+mutex
+-
+sstream
+-
+string
+-
+thread
+-
+
+/home/reded/Dropbox/chat/client/main.cpp
+client.h
+/home/reded/Dropbox/chat/client/client.h
+

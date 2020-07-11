@@ -1,0 +1,8 @@
+/home/reded/Dropbox/chat/build/CMakeFiles/rebuild_cache.dir
+/home/reded/Dropbox/chat/build/CMakeFiles/edit_cache.dir
+/home/reded/Dropbox/chat/build/server/CMakeFiles/rebuild_cache.dir
+/home/reded/Dropbox/chat/build/server/CMakeFiles/edit_cache.dir
+/home/reded/Dropbox/chat/build/server/CMakeFiles/server.dir
+/home/reded/Dropbox/chat/build/client/CMakeFiles/rebuild_cache.dir
+/home/reded/Dropbox/chat/build/client/CMakeFiles/edit_cache.dir
+/home/reded/Dropbox/chat/build/client/CMakeFiles/client.dir
