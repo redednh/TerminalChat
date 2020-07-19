@@ -120,8 +120,9 @@ void Client::recvMessageHandler() {
             if (errno != EWOULDBLOCK) {
                 std::cerr << "Error 7: " << strerror(errno)
                           << " (Receive data failed)" << std::endl;
-                mtx.unlock();
             }
+            
+	        mtx.unlock();
             return;
         }
         if (receive == 0) {
