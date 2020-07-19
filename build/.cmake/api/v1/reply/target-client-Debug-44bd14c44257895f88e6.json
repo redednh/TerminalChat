@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 5,
+				"line" : 6,
 				"parent" : 0
 			}
 		]
@@ -87,7 +87,8 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -108,6 +109,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "client/client.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "server/commandServer.h",
 			"sourceGroupIndex" : 1
 		}
 	],

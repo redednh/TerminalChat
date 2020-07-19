@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/reded/Dropbox/chat/server/commandServer.h
+
 /home/reded/Dropbox/chat/server/server.cpp
 server.h
 /home/reded/Dropbox/chat/server/server.h
@@ -41,10 +43,16 @@ cstring
 -
 iostream
 -
+iterator
+-
 map
 -
 mutex
 -
 thread
 -
+vector
+-
+commandServer.h
+/home/reded/Dropbox/chat/server/commandServer.h
 

@@ -16,35 +16,46 @@
 
 #include <cstring>
 #include <iostream>
+#include <iterator>
 #include <map>
 #include <mutex>
 #include <thread>
+#include <vector>
+
+#include "commandServer.h"
 
 class Server {
- private:
-  int port;
+   private:
+    // Server address
+    std::string ipAddr;
+    int port;
 
-  int lenght, receive, enable = 1;
-  int listening_sd = -1, new_sd = -1;
-  bool desc_ready, end_server = false, compress_array = false;
-  bool closeConnection;
-  const int sizeMessage = 1024;
-  char *message;
-  struct sockaddr_in6 addr;
-  int timeout;
-  struct pollfd fds[200];
-  int nfds = 1, current_size = 0, i, j;
-  std::mutex mtx;
-  std::map<int, std::string> nameClient;
+    // Sockets
+    int listenSocket = -1;
+    std::vector<struct pollfd> pollSockets;
+    std::map<int, std::string> clientNames;  // client names matching the socket
 
-  void handler();
-  void sendMsg_handler();
-  void recvMsg_handler();
-  void registration();
-  void closeServer();
+    // Server control flags
+    bool endServerFlag = false;
+    bool compressPollSocketsFlag = false;
+    bool closeConnectionFlag = false;
 
- public:
-  Server();
-  ~Server();
-  void startServer();
+    // Helper variable
+    int receive;  // Helper variable for getting the result of a function call
+    std::string message;  // Messaging field
+    int timeout;
+
+    /* Server management methods */
+    void handler();
+    void sendMessageHandler(struct pollfd senderSocket);
+    void recvMessageHandler(struct pollfd senderSocket);
+    void registration(struct pollfd senderSocket);
+    void closeServer();
+
+   public:
+    Server();
+    Server(std::string ipAddr, int port, int timeoutMinute);
+    ~Server();
+
+    void startServer();
 };

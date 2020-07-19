@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/reded/Dropbox/chat/client/client.cpp
-client.h
-/home/reded/Dropbox/chat/client/client.h
-
 /home/reded/Dropbox/chat/client/client.h
 arpa/inet.h
 -
@@ -35,8 +31,14 @@ string
 -
 thread
 -
+vector
+-
+../server/commandServer.h
+/home/reded/Dropbox/chat/server/commandServer.h
 
 /home/reded/Dropbox/chat/client/main.cpp
 client.h
 /home/reded/Dropbox/chat/client/client.h
+
+/home/reded/Dropbox/chat/server/commandServer.h
 

@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(chat VERSION 0.0.1)
+project(chat VERSION 0.0.2)
 
-add_executable(server main.cpp server.cpp server.h)
+add_executable(server main.cpp server.cpp server.h commandServer.h)
 
 find_package (Threads)
 

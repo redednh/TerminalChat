@@ -3,7 +3,9 @@
 
 client/CMakeFiles/client.dir/client.cpp.o: ../client/client.cpp
 client/CMakeFiles/client.dir/client.cpp.o: ../client/client.h
+client/CMakeFiles/client.dir/client.cpp.o: ../server/commandServer.h
 
 client/CMakeFiles/client.dir/main.cpp.o: ../client/client.h
 client/CMakeFiles/client.dir/main.cpp.o: ../client/main.cpp
+client/CMakeFiles/client.dir/main.cpp.o: ../server/commandServer.h
 

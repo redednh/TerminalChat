@@ -13,28 +13,34 @@
 #include <sstream>
 #include <string>
 #include <thread>
+#include <vector>
+
+#include "../server/commandServer.h"
 
 class Client {
- private:
-  int port;
+   private:
+    // Server address
+    int port;
+    std::string ipAddr;
 
-  int receive, enable = 1;
-  int client_sd = -1, new_sd = -1;
-  bool regName = false, end_server = false, compress_array = false;
-  bool closeConnection;
-  const int sizeMessage = 1024;
-  char *message;
-  struct sockaddr_in6 addr;
-  std::mutex mtx;
+    // Sockets
+    int clientSocket = -1;
 
-  void handler();
-  void sendMsg_handler();
-  void recvMsg_handler();
-  void registration();
-  void closeClient();
+    // Helper variable
+    int receive;  // Helper variable for getting the result of a function call
+    std::string message;  // Messaging field
+    std::mutex mtx;
 
- public:
-  Client();
-  ~Client();
-  void startClient();
+    /* Client management methods */
+    void handler();
+    void recvMessageHandler();
+    void registration();
+    void closeClient();
+
+   public:
+    Client();
+    Client(std::string ipAddr, int port); 
+    ~Client();
+
+    void startClient();
 };
