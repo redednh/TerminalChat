@@ -50,7 +50,7 @@ void Client::handler() {
         // Reseiving user message
         std::getline(std::cin, message);
 
-        // Getting comman server
+        // Sending a command to the server
         int command = static_cast<int>(commandServer::getMessage);
         receive = send(clientSocket, &command, sizeof(int), 0);
         if (receive < 0) {
